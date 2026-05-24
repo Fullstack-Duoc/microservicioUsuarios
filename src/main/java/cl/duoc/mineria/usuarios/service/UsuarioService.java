@@ -3,6 +3,7 @@ package cl.duoc.mineria.usuarios.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import cl.duoc.mineria.usuarios.config.WebClientConfig;
 import cl.duoc.mineria.usuarios.dto.UsuarioRequestDTO;
 import cl.duoc.mineria.usuarios.dto.UsuarioResponseDTO;
 import cl.duoc.mineria.usuarios.exceptions.ResourceNotFoundException;
@@ -21,6 +22,9 @@ public class UsuarioService {
 
     @Autowired
     private UsuarioMapper usuarioMapper;
+
+    @Autowired
+    private WebClientConfig WebClient;
 
     // 1. OBTENER TODOS LOS USUARIOS
     public List<UsuarioResponseDTO> getAllUsuarios() {
