@@ -16,19 +16,16 @@ import lombok.NoArgsConstructor;
 public class UsuarioRequestDTO {
 
     @NotBlank(message = "El RUT es obligatorio y no puede estar vacío")
-
     @Pattern(
         regexp = "^[0-9]{1,2}\\.[0-9]{3}\\.[0-9]{3}-[0-9kK]{1}$",
         message = "Formato de RUT inválido. Ejemplo válido: 18.123.456-7"
     )
-
     private String rut;
 
     @NotBlank(message = "El nombre completo es obligatorio")
     private String nombreCompleto;
 
     @NotBlank(message = "El correo electrónico es obligatorio")
-
     @Email(message = "El correo debe tener un formato válido (ej: usuario@dominio.com)")
     private String correo;
 
