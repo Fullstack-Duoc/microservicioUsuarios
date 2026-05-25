@@ -41,6 +41,5 @@ public class UsuarioMapper {
         dto.setRol(usuario.getRol());
 
         return dto;
-
     }
 }

@@ -48,9 +48,11 @@ public class UsuarioController {
 
     // 5. ELIMINAR UN USUARIO
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT) // Retorna HTTP 204 No Content al eliminar correctamente
-    public void deleteUsuario(@PathVariable Long id) {
+    public String deleteUsuario(@PathVariable Long id) {
+
         usuarioService.deleteUsuario(id);
+
+        return "Usuario con id " + id + " eliminado correctamente";
     }
 
 }

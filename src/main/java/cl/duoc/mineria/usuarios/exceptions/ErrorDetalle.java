@@ -15,5 +15,4 @@ public class ErrorDetalle {
     private LocalDateTime timestamp; // Fecha y hora exacta del error
     private String mensaje;          // Resumen amigable del error
     private String detalles;         // Ruta o contexto donde ocurrió el fallo
-
 }

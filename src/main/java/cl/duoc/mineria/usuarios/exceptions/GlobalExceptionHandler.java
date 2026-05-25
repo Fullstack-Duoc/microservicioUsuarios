@@ -61,8 +61,7 @@ public class GlobalExceptionHandler {
                 .timestamp(LocalDateTime.now())
                 .mensaje("Ocurrió un error interno en el servidor: " + exception.getMessage())
                 .detalles(webRequest.getDescription(false))
-                .build();
-                
+                .build();               
         return new ResponseEntity<>(errorDetalle, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
