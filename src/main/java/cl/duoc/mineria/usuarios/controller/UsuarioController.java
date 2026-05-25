@@ -12,7 +12,7 @@ import cl.duoc.mineria.usuarios.service.UsuarioService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("api/v1/usuarios")
 public class UsuarioController {
 
     // Aplicamos tu estilo: Inyección por campo limpia con @Autowired, sin constructores ni "final"
