@@ -1,4 +1,4 @@
-package cl.mineria.usuarios.model;
+package cl.duoc.mineria.usuarios.model;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
@@ -9,13 +9,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
-import lombok.Data;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "usuarios")
 @Data
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+// Ordena los resultados en postman
 @JsonPropertyOrder({
     "id",
     "rut",
@@ -27,9 +33,9 @@ import lombok.Data;
 
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //DECORADOR AUTOINCREMENTAL DEL ID 
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // DECORADOR AUTOINCREMENTAL DEL ID 
     @Column(name = "id")
-    private int id;
+    private Long id;
 
     @Column(name = "rut", nullable = false, length = 12)
     private String rut;
